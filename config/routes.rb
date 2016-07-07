@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'contact_info' => 'contacts#contact'
-  get 'all_contacts' => 'contacts#contact'
+  get 'all_contacts' => 'contacts#all_contacts'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
