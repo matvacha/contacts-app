@@ -15,7 +15,7 @@ class ContactsController < ApplicationController
       email: params['email'],
       phone_number: params['phone_number']
     )
-    render 'create.html.erb'
+    redirect_to "/contacts/#{@contact.id}"
   end
 
   def show
@@ -36,13 +36,13 @@ class ContactsController < ApplicationController
       email: params['email'],
       phone_number: params['phone_number']
     )
-    render 'update.html.erb'
+    redirect_to "/contacts/#{@contact.id}"
   end
 
   def destroy
     @contact = Contact.find_by(id: params['id'])
     @contact.destroy
-    render 'destroy.html.erb'
+    redirect_to '/contacts'
   end
 end
 
