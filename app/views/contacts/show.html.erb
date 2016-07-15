@@ -1,7 +1,10 @@
-<h4><%= @contact.first_name + " " + @contact.last_name %></h4>
+<h4><%= @contact.first_name + " " + @contact.middle_name.to_s + " " + @contact.last_name %></h4>
 <p><%= @contact.email %></p>
 <p><%= @contact.phone_number %></p>
+<p><%= @contact.contact %></p>
 <!-- <a href="/contacts">Back to all contacts</a>
  --><div>
-  <%= link_to "Delete this contact", "/contacts/#{@contact.id}", method: :delete %>
+<p><%= @contact.friendly_updated_at %></p>
+  <%= link_to "Delete this contact", "/contacts/#{@contact.id}", class: "btn btn-warning", method: :delete %>
+  <%= link_to "Edit", "/contacts/#{@contact.id}/edit", class: "btn btn-success" %>
 </div>

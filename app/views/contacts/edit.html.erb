@@ -15,6 +15,14 @@
   <div class="form-group">
     <%= label_tag :phone_number  %>
     <%= text_field_tag :phone_number, @contact.phone_number, class: "form-control"  %>
+  <div class="form-group">
+    <%= label_tag :middle_name %>
+    <%= text_field_tag :middle_name, @contact.middle_name, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :contact %>
+    <%= text_field_tag :contact, @contact.contact, class: "form-control" %>
+  </div>
   </div>
   <%= submit_tag "Update contact", class: "btn btn-default" %>
 <% end %>
